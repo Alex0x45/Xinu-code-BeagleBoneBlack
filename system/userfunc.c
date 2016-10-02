@@ -8,7 +8,7 @@
  */
 
 #ifndef LIMIT
-#define	LIMIT 200
+#define	LIMIT 120
 #endif
 
 void	sendchar(char ch)
