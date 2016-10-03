@@ -52,7 +52,7 @@ SFLAGS  = ${INCLUDE}
 
 # Loader flags
 
-LDFLAGS = -dn -m armelf -Map xinu.map -T ld.script
+LDFLAGS = -dn -m armelf -Map xinu.map -T ${LDSCRIPT}
 
 all:	xinu
 
