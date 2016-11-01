@@ -16,15 +16,15 @@ void	sendchar(char ch)
 	int	i;
 	for(i=0; i < LIMIT; i++) 
 	{
-		putc(CONSOLE, ch);
+		kputc(ch);
 	}
 }
 
 int	usermain(void)
 {
-	printf("\n\nUser main BEGIN\n\n");
+	kprintf("\n\nUser main BEGIN\n\n");
 	resume( create(sendchar, 1024, 20, "send A", 1, 'A'));
 	resume( create(sendchar, 1024, 20, "send B", 1, 'B'));
-	printf("\n\nUser main END\n\n");
+	kprintf("\n\nUser main END\n\n");
 	return 0;
 }
