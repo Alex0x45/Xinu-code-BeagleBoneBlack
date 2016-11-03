@@ -60,10 +60,6 @@ process	main(void)
 		kprintf("%x\n", rx[i]);
 	}
 
-	kprintf("\n...running usermain\n");
-	int 	rc = usermain();
-	kprintf("\n...usermain returned %d\n", rc);
-	
 	kprintf("\n...creating a shell\n");
 	recvclr();
 	resume(create(shell, 8192, 50, "shell", 1, CONSOLE));
